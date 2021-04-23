@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F734DDF2254915AF002ED5E1 /* Guess_The_FlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734DDF1254915AF002ED5E1 /* Guess_The_FlagApp.swift */; };
-		F734DDF4254915AF002ED5E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734DDF3254915AF002ED5E1 /* ContentView.swift */; };
+		F734DDF4254915AF002ED5E1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734DDF3254915AF002ED5E1 /* GameView.swift */; };
 		F734DDF6254915B8002ED5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F734DDF5254915B8002ED5E1 /* Assets.xcassets */; };
 		F734DDF9254915B8002ED5E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F734DDF8254915B8002ED5E1 /* Preview Assets.xcassets */; };
+		F734DE0325492A4E002ED5E1 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734DE0225492A4E002ED5E1 /* InitialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F734DDEE254915AF002ED5E1 /* Guess The Flag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess The Flag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F734DDF1254915AF002ED5E1 /* Guess_The_FlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess_The_FlagApp.swift; sourceTree = "<group>"; };
-		F734DDF3254915AF002ED5E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F734DDF3254915AF002ED5E1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		F734DDF5254915B8002ED5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F734DDF8254915B8002ED5E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F734DDFA254915B8002ED5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F734DE0225492A4E002ED5E1 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				F734DDF1254915AF002ED5E1 /* Guess_The_FlagApp.swift */,
-				F734DDF3254915AF002ED5E1 /* ContentView.swift */,
+				F734DDF3254915AF002ED5E1 /* GameView.swift */,
+				F734DE0225492A4E002ED5E1 /* InitialView.swift */,
 				F734DDF5254915B8002ED5E1 /* Assets.xcassets */,
 				F734DDFA254915B8002ED5E1 /* Info.plist */,
 				F734DDF7254915B8002ED5E1 /* Preview Content */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F734DDF4254915AF002ED5E1 /* ContentView.swift in Sources */,
+				F734DE0325492A4E002ED5E1 /* InitialView.swift in Sources */,
+				F734DDF4254915AF002ED5E1 /* GameView.swift in Sources */,
 				F734DDF2254915AF002ED5E1 /* Guess_The_FlagApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
