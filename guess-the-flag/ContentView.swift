@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var alertIsShowing = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Howdy")
     }
 }
 
