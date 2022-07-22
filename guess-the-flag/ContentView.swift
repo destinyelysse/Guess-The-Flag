@@ -9,29 +9,66 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     
-    var correctAnswer = Int.random(in: 0...2)
+    @State private var correctAnswer = Int.random(in: 0...2)
+    
+    @State private var showingResults = false
+    
+    @State private var resultsTitle = ""
+    
+    @State private var resultsMessage = ""
+    
+    @State private var currentScore = 0
     
     var body: some View {
+        
         ZStack{
             Color(hue: 0.65, saturation: 0.53, brightness: 1.0, opacity: 1.0).edgesIgnoringSafeArea(.all)
             VStack(spacing: 30) {
+                Spacer()
                 VStack {
-                    Text("Tap the flag of")
-                    Text(countries[correctAnswer])
+                    Text("Tap the flag of").foregroundColor(.white)
+                    Text(countries[correctAnswer]).foregroundColor(.white)
                 }
                 ForEach(0 ..< 3){ number in
                     Button(action: {
-                        // flag tapped
+                        self.flagTapped(number)
                     }){
                         Image(self.countries[number])
                             .renderingMode(.original)
                     }
                 }
+                Text("Score: \(currentScore)").foregroundColor(.white)
+                Spacer()
+                Spacer()
             }
+        }.alert(isPresented: $showingResults){
+            Alert(title: Text(resultsTitle),
+                  message: Text(resultsMessage),
+                  dismissButton: .default(Text("Play again")){
+                self.resetRound()
+            })
         }
     }
+    
+    func flagTapped(_ number: Int){
+        if number == correctAnswer {
+            currentScore += 1
+            resultsTitle = "Correct!"
+            resultsMessage = "Your score is \(currentScore)."
+        } else {
+            resultsTitle = "Incorrect..."
+            resultsMessage = "You selected the country of \(countries[number])"
+        }
+        showingResults = true
+    }
+    
+    func resetRound() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
