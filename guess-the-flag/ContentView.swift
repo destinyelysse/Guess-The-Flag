@@ -27,9 +27,9 @@ struct ContentView: View {
             Color(hue: 0.65, saturation: 0.53, brightness: 1.0, opacity: 1.0).edgesIgnoringSafeArea(.all)
             VStack(spacing: 30) {
                 Spacer()
-                VStack {
+                VStack(spacing: 10) {
                     Text("Tap the flag of").foregroundColor(.white)
-                    Text(countries[correctAnswer]).foregroundColor(.white)
+                    Text(countries[correctAnswer]).foregroundColor(.white).font(.largeTitle).fontWeight(.black)
                 }
                 ForEach(0 ..< 3){ number in
                     Button(action: {
@@ -37,6 +37,9 @@ struct ContentView: View {
                     }){
                         Image(self.countries[number])
                             .renderingMode(.original)
+                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                            .overlay(RoundedRectangle(cornerRadius: 7).stroke(Color.black, lineWidth: 1))
+                            .shadow(color: .black, radius: 2)
                     }
                 }
                 Text("Score: \(currentScore)").foregroundColor(.white)
